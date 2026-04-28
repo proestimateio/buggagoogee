@@ -1,0 +1,13 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "username":        { "type": "string" },
+    "character":       { "type": "string" },
+    "character_color": { "type": "string" },
+    "message":         { "type": "string" },
+    "type":            { "type": "string", "default": "chat" },
+    "world":           { "type": "string", "default": "overworld" }
+  },
+  "required": ["username", "message"]
+}

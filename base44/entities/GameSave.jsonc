@@ -1,0 +1,31 @@
+{
+  "name": "GameSave",
+  "type": "object",
+  "properties": {
+    "username": { "type": "string" },
+    "character": {
+      "type": "string",
+      "enum": ["eli", "lyla", "buggagoogee", "shadow", "blaze"]
+    },
+    "character_color":     { "type": "string", "default": "#a855f7" },
+    "appearance":          { "type": "object" },
+    "pos_x":               { "type": "number", "default": 1.5 },
+    "pos_y":               { "type": "number", "default": 1.5 },
+    "angle":               { "type": "number", "default": 0 },
+    "current_world":       { "type": "string", "default": "overworld" },
+    "coins":               { "type": "number", "default": 0 },
+    "level":               { "type": "number", "default": 1 },
+    "xp":                  { "type": "number", "default": 0 },
+    "inventory":           { "type": "array", "items": { "type": "string" } },
+    "completed_minigames": { "type": "array", "items": { "type": "string" } },
+    "explored_areas":      { "type": "array", "items": { "type": "string" } },
+    "high_scores":         { "type": "object" },
+    "active_adventure":    { "type": "string" },
+    "adventure_progress":  { "type": "object" },
+    "unlocked_achievements": { "type": "array", "items": { "type": "string" } },
+    "unlocked_skins":      { "type": "array", "items": { "type": "string" } },
+    "last_played":         { "type": "string" },
+    "online":              { "type": "boolean", "default": false }
+  },
+  "required": ["username", "character"]
+}
